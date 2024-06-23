@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Fabrini - Desenvolvedor Full Stack</title>
+    <link rel="icon" href="/css/assets/images/title-image.png" type="image/png">
+    <link rel="stylesheet" href="/css/styles/home_style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <ion-icon name="logo-react"></ion-icon>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+                </ul>
+            </div>
+
+            
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><ion-icon class="icon" name="menu-outline"></ion-icon></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+            </ul>
+            
+        </div>
+    </header>
+    <!-- Fim do Header -->
+
+    <!-- Início -->
+
+    <div class="inicio">
+        <div class="ring-div">
+            <div class="ring">
+                <i style="--clr:rgb(30, 96, 228);"></i>
+                <i style="--clr:rgb(30, 0, 175);"></i>
+                <i style="--clr:rgb(30, 0, 70);"></i>
+                <div class="div-my-photo">
+                    <img src="/css/assets/images/Minha Foto.png" alt="" class="my-photo">
+                </div>
+            </div>
+        </div>
+        <div class="inicio-txt">
+            <div class="info">
+                <p class="paragraph">
+                    <span style="--d: 1s;" class="info-nome">Vinicius Fabrini Silveira</span>
+                    <span style="--d: 1.1s;" class="info-infos">Desenvolvedor FullStack</span>
+                </p>
+                <div class="inicio-buttons">
+                    <a href="/css/assets/to_download/CV_Vinicius_Fabrini_Silveira.pdf" download="CV_Vinicius_Fabrini_Silveira.pdf">
+                        <div class="button-icon">
+                            <div class="icon">
+                                <ion-icon name="download-outline"></ion-icon>
+                            </div>
+                            <div class="cube">
+                              <span class="side front">Currículo</span>
+                              <span class="side top">Download CV</span>
+                            </div>
+                          </div>
+                    </a>
+                      <a href="https://wa.me/5511940629779">
+                        <div class="button-icon" id="wpp1">
+                            <div class="icon">
+                                <ion-icon name="logo-whatsapp"></ion-icon>
+                            </div>
+                            <div class="cube">
+                              <span class="side front">Contato</span>
+                              <span class="side top" id="wpp2">Mande uma mensagem</span>
+                            </div>
+                          </div>
+                      </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Fim do Início -->
+
+    <!-- Sobre -->
+    <div class="sobre" id="sobre">
+        <div class="sobre-mim">
+            <h1 class="sobre-title">Sobre Mim</h1>
+            <p>Olá! Sou Vinicius, estudante de Análise e Desenvolvimento de Sistemas na Facens. Tenho 19 anos e estou em busca de uma oportunidade de estágio ou primeiro emprego na área. Tenho conhecimento em linguagens de programação como Java, HTML, CSS, JavaScript, React e React Native. Além disso, possuo um amplo conhecimento em banco de dados, metodologias ágeis como Scrum e Kanban, e familiaridade com redes de computadores. Recentemente, adquiri habilidades em Android Studio para desenvolvimento mobile.</p>
+            <p>Estou comprometido em aplicar meus conhecimentos e sempre buscar mais! Sou dedicado e aficionado por resolver projetos tecnológicos. Ficarei feliz em explorar novas oportunidades.</p>
+        </div>
+        <div class="experiencia">
+            <h1 class="experiencia-txt">Experiências</h1>
+            <div class="experiencia-cards">
+                <div class="card-experiencia">
+                    <img src="/css/assets/images/educacao1.jpeg" alt="" class="card-img">
+                    <div class="card-experiencia-body">
+                        <ion-icon name="school-outline" class="card-experiencia-icon"></ion-icon>
+                        <h1 class="card-experiencia-title">Educação</h1>
+                        <p class="card-experiencia-sub-title">Facens-Sorocaba</p>
+                        <p class="card-experiencia-info">Análise e Desenvolvimento de Sistemas</p>
+                    </div>
+                </div>
+                <div class="card-experiencia">
+                    <img src="/css/assets/images/trabalho1.jpg" alt="" class="card-img">
+                    <div class="card-experiencia-body">
+                        <ion-icon name="briefcase-outline" class="card-experiencia-icon"></ion-icon>
+                        <h1 class="card-experiencia-title">Trabalho</h1>
+                        <p class="card-experiencia-sub-title">Buscando oportunidade</p>
+                        <p class="card-experiencia-info">Em busca de novas experiências e desafios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do Sobre-->
+    
+    <!-- Habilidades -->
+        <div class="cards" id="habilidades">
+            <h1 class="cards-title">Habilidades</h1>
+                <div class="container-cards">
+                    
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">HTML</p>
+                            <img src="/css/assets/images/html_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">CSS</p>
+                            <img src="/css/assets/images/css_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">JAVA</p>
+                            <img src="/css/assets/images/java_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">JAVASCRIPT</p>
+                            <img src="/css/assets/images/js_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">REACT</p>
+                            <img src="/css/assets/images/react_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">NODE.JS</p>
+                            <img src="/css/assets/images/nodejs_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">PYTHON</p>
+                            <img src="/css/assets/images/python_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">MySQL</p>
+                            <img src="/css/assets/images/mysql_logo.png" alt="" class="character">
+                    </div>
+                    <div class="card">
+                        <div class="wrapper">
+                            <img src="/css/assets/images/FundoAll.jpg" alt="" class="cover-image">
+                        </div>
+                            <p class="title">GIT</p>
+                            <img src="/css/assets/images/git_logo.png" alt="" class="character">
+                    </div>
+                </div>
+        </div>
+    <!-- Fim das Habilidades -->
+
+    <!-- Projetos -->
+        
+        <div class="projetos" id="projetos">
+            <h1 class="projetos-title">Projetos</h1>
+                <div class="container">
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <div class="inner">
+                                <ion-icon name="home-outline" class="icone"></ion-icon>
+                                <h3>Site de Imobiliária</h3>
+                                <p>
+                                    Site da Imobiliária LSilva foi um projeto no qual foi feito uma modernização completa no site, com funções únicas como a parte de visualização dos clientes, até um sistema de login e painel de controle completo. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="inner">
+                                <ion-icon name="home-outline" class="icone"></ion-icon>
+                                <h3>Site de Imobiliária</h3>
+                                <p>
+                                    O projeto foi feito com Html e Css original e responsivo para o frontend, Javascript e Node.js para o backend, com implementação de banco de dados MySQL, além de uma versão mobile em React-Native, foi completamente documentado, e feito com metodologias ágeis de Scrum e Kanban.
+                                </p>
+                                <a href="https://github.com/yVinii/SiteImobi">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Veja no GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <div class="inner">
+                                <ion-icon name="car-outline" class="icone"></ion-icon>
+                                <h3>Locadora de Carros</h3>
+                                <p>
+                                    O projeto da locadora de carros foi um projeto que buscamos um design simples e objetivo, junto com suas funcionalidades para registrar carros, clientes, funcionários e suas transações de locação.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="inner">
+                                <ion-icon name="car-outline" class="icone"></ion-icon>
+                                <h3>Locadora de Carros</h3>
+                                <p>
+                                    O projeto foi feito em Java, com design em Java Swing, suas funcionalidades são vinculadas com banco de dados MySQL, com documentação completa e feito com a metodologia ágil Scrum.
+                                </p>
+                                <a href="https://github.com/gaschonfelder/Locadora-de-carros">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Veja no GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-front">
+                            <div class="inner">
+                                <ion-icon name="trophy-outline" class="icone"></ion-icon>
+                                <h3>Criação de Campeonatos</h3>
+                                <p>
+                                    GameON é um trabalho que visa facilitar a modelagem de campeonatos, trazendo verificação por cpf para os jogadores, sorteio, chaveamento para campeonatos e relatório em um PDF ao fim do campeonato. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="inner">
+                                <ion-icon name="trophy-outline" class="icone"></ion-icon>
+                                <h3>Criação de Campeonatos</h3>
+                                <p>
+                                    O projeto foi feito em Java, suas funcionalidades como verificação de cpf, registro de jogadores, times, campeonatos, sorteio e geração de pdf para resultados são vinculadas com banco de dados MySQL, com a metodologia ágil Scrum, além de toda sua documentação completa.
+                                </p>
+                                <a href="https://github.com/yVinii/GameOn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Veja no GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    <!-- Fim dos Projetos -->
+
+    <!-- Footer -->
+
+        <div class="footer" id="contato">
+            <h1>Entre em contato</h1>
+            <div class="contato">
+                <a href="https://www.linkedin.com/in/vinicius-fabrini-silveira-97310a257/" style="--color: #0072b1">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/viniciusfabrini/" style="--color: #E1306C">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://github.com/yVinii" style="--color: #e1e1e1">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://wa.me/5511940629779" style="--color: #00dc00">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="direitos">
+            <p>©2024 Vinicius Fabrini Silveira - Todos os direitos reservados</p>
+        </div>
+
+    <!-- Fim do Footer -->
+
+    <!-- Scripts -->
+    <script src="/js/mobileMenu.js"></script> <!-- Script Menu Mobile -->
+    <!--<script src="/js/slider.js"></script>--> <!-- Script do Slider -->
+</body>
+</html>
