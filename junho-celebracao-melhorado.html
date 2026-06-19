@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇧🇷 Junho: Code & Festa Junina 🚀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 50%, #0f172a 100%);
+            color: white;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            font-size: 2rem;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti {
+            animation: confettiFall 3s ease-in forwards;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(26, 31, 58, 0.9) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(250,204,21,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(250, 204, 21, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+            animation: pulse 5s ease-in-out infinite 1s;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            animation: slideDown 1s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #facc15, #f59e0b, #dc2626, #facc15);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite, float 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(250, 204, 21, 0.3);
+        }
+
+        .emoji-title {
+            font-size: 4rem;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .emoji-title:nth-child(1) { animation-delay: 0s; }
+        .emoji-title:nth-child(2) { animation-delay: 0.2s; }
+        .emoji-title:nth-child(3) { animation-delay: 0.4s; }
+
+        .hero p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            opacity: 0.95;
+            animation: slideUp 1s ease 0.2s both;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #f59e0b, #dc2626);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            animation: slideUp 1s ease 0.4s both;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+        }
+
+        .highlight {
+            color: #facc15;
+            font-weight: 700;
+        }
+
+        .highlight-red {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 8%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section:nth-child(even) {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #facc15, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideDown 0.8s ease;
+        }
+
+        /* Cards Grid */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            animation: fadeIn 1s ease 0.2s both;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid transparent;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(250, 204, 21, 0.1), rgba(220, 38, 38, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: #facc15;
+            box-shadow: 0 20px 50px rgba(250, 204, 21, 0.2);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(250, 204, 21, 0.1), rgba(220, 38, 38, 0.1));
+            animation: spin 10s linear infinite;
+        }
+
+        .card:hover .card-icon {
+            animation: spin 5s linear infinite;
+        }
+
+        .card-content {
+            padding: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #facc15, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card p {
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #dc2626);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Dev Corner Special */
+        .dev-corner {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 2px solid #facc15;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dev-corner::before {
+            content: '< />';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 5rem;
+            opacity: 0.05;
+            font-weight: bold;
+        }
+
+        .dev-corner h4 {
+            color: #facc15;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .code-snippet {
+            background: #0f172a;
+            border: 1px solid #facc15;
+            border-radius: 10px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            color: #facc15;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(135deg, #f59e0b, #dc2626, #f59e0b);
+            background-size: 300% 300%;
+            text-align: center;
+            padding: 70px 20px;
+            animation: gradientShift 6s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner::before,
+        .banner::after {
+            content: '⚽';
+            position: absolute;
+            font-size: 4rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .banner::before {
+            top: 20px;
+            left: 20px;
+        }
+
+        .banner::after {
+            bottom: 20px;
+            right: 20px;
+            animation-delay: 3s;
+        }
+
+        .banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .banner p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: #facc15;
+            box-shadow: 0 10px 30px rgba(250, 204, 21, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #facc15;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            font-size: 1rem;
+            border-top: 2px solid #facc15;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer a {
+            color: #facc15;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer a:hover {
+            text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+        }
+
+        /* Floating Elements */
+        .float-emoji {
+            position: fixed;
+            font-size: 3rem;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .float-emoji:nth-child(1) { left: 5%; top: 10%; animation-delay: 0s; }
+        .float-emoji:nth-child(2) { right: 5%; top: 25%; animation-delay: 1s; }
+        .float-emoji:nth-child(3) { left: 10%; bottom: 20%; animation-delay: 2s; }
+        .float-emoji:nth-child(4) { right: 10%; bottom: 15%; animation-delay: 3s; }
+
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-40px) rotate(10deg);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .emoji-title {
+                font-size: 2.5rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .banner h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Emojis -->
+    <div class="float-emoji">🌽</div>
+    <div class="float-emoji">⚽</div>
+    <div class="float-emoji">🎉</div>
+    <div class="float-emoji">💻</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div style="margin-bottom: 20px;">
+                <span class="emoji-title">🌽</span>
+                <span class="emoji-title">⚽</span>
+                <span class="emoji-title">💻</span>
+            </div>
+            <h1>Desenvolvimento, Festa Junina e Copa do Mundo! 🚀</h1>
+            <p>
+                Bem-vindo ao mês mais <span class="highlight">festivo</span> do Brasil!
+                Aqui combinamos o espírito das
+                <span class="highlight">Festas Juninas</span>,
+                a paixão da
+                <span class="highlight-red">Copa do Mundo 🇧🇷</span>
+                e a energia dos <span class="highlight">Developers</span> apaixonados por código.
+            </p>
+            <button class="cta-button" onclick="lancarConfetes()">🎊 Celebrar! 🎊</button>
+        </div>
+    </section>
+
+    <!-- Festas Juninas - Detalhada -->
+    <section class="section">
+        <h2 class="title">🌽 Festas Juninas: Tradição Brasileira 🔥</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🎪</div>
+                <div class="card-content">
+                    <h3>Santo Antônio, São João e São Pedro</h3>
+                    <p>As celebrações dos santos juninos marcam o calendário! Cada um tem sua essência: Santo Antônio dos casamentos, São João da alegria descontrolada, e São Pedro das chuvas bênçãos. Uma tradição que une gerações!</p>
+                    <span class="badge">📅 12, 24 e 29 de junho</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌽</div>
+                <div class="card-content">
+                    <h3>Sabores Únicos</h3>
+                    <p>Pamonha, caldo verde, bolo de milho, broa, curau, pé-de-moleque, bolo de chuva... cada receita traz memórias e celebra nossa cultura. Comidas preparadas com amor que alimentam a alma!</p>
+                    <span class="badge">😋 Delícia Garantida</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💃</div>
+                <div class="card-content">
+                    <h3>Quadrilha e Danças</h3>
+                    <p>A quadrilha é a alma da festa! Pares dançando, sapatos brilhando, sorrisos genuínos. Xote, vanerão, forró... ritmos que fazem todos dançar juntos em harmonia e diversão.</p>
+                    <span class="badge">🎵 Música ao Vivo</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <div class="card-content">
+                    <h3>Fogueira e Aquecer Corações</h3>
+                    <p>A fogueira é o coração da festa! Ao redor dela, histórias são compartilhadas, amizades são fortalecidas, e a comunidade se une com calor genuíno e conversas sinceras.</p>
+                    <span class="badge">👥 União e Comunidade</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎆</div>
+                <div class="card-content">
+                    <h3>Bandeirinhas e Decoração</h3>
+                    <p>Cores vibrantes, bandeirinhas coloridas, lanternas flutuantes iluminando o céu! Cada detalhe é pensado para criar um ambiente mágico repleto de alegria e esperança.</p>
+                    <span class="badge">✨ Encantador</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">👗</div>
+                <div class="card-content">
+                    <h3>Roupas Típicas</h3>
+                    <p>Camisas xadrez, calças jeans rasgadas, chapéu de palha, lenços e acessórios! A roupa típica é uma declaração de alegria, um código entre juninos que diz: aqui a festa é genuína!</p>
+                    <span class="badge">🎭 Estilo Caipira</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copa do Mundo -->
+    <section class="section">
+        <h2 class="title">⚽ Brasil na Copa do Mundo: Paixão Amarela 💛</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🇧🇷</div>
+                <div class="card-content">
+                    <h3>País de Campeões 🏆</h3>
+                    <p>Brasil: 5 vezes campeão mundial! Pelé, Ronaldinho, Ronaldo... nossos ídolos eternalizam a história. Cada gol é memória, cada vitória é paixão. O futebol é nossa identidade!</p>
+                    <span class="badge">🏆 Legado Histórico</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚽</div>
+                <div class="card-content">
+                    <h3>Espírito de Equipe</h3>
+                    <p>Como em um time de futebol, nossas melhores entregas saem da harmonia e confiança mútua. Um developer sozinho é um jogador, uma equipe é um campeão. Somos Time!</p>
+                    <span class="badge">🤝 Sincronia Perfeita</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">😤</div>
+                <div class="card-content">
+                    <h3>Garra Brasileira</h3>
+                    <p>Encaramos desafios como um jogador em campo: com determinação, criatividade e improviso. O jogo muda? A gente se adapta. O placar vira? A gente nunca desiste!</p>
+                    <span class="badge">💪 Nunca Desistimos</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <div class="card-content">
+                    <h3>Futebol Criativo</h3>
+                    <p>Não é só técnica, é arte! Jogo bonito, toque de primeira, improviso mágico. No desenvolvimento também: código limpo é art, soluções criativas são magias, e entrega perfeita é gol!</p>
+                    <span class="badge">🎨 Arte e Técnica</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📺</div>
+                <div class="card-content">
+                    <h3>País Inteiro Torce Junto</h3>
+                    <p>Quando o Brasil joga, tudo para! Cidades se esvaziam, torcidas cantam, abraços sinceros na rua. Essa energia unificada nos lembra que juntos somos imparáveis!</p>
+                    <span class="badge">🌟 Uma Nação</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <div class="card-content">
+                    <h3>Próximo Grande Feito</h3>
+                    <p>O Brasil sempre volta! Cada Copa é uma chance, cada match uma oportunidade. No código também: cada sprint, cada deploy, cada release é nosso chance de vencer!</p>
+                    <span class="badge">💯 Sempre Lutamos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dev Corner -->
+    <section class="section">
+        <h2 class="title">💻 Dev Corner: Code Like a Champion 🏆</h2>
+        <div class="dev-corner">
+            <h4>🔧 Mantra do Dev em Junho</h4>
+            <div class="code-snippet">
+console.log("🚀 Vou fazer um código que vai para a semifinal!");
+<br>
+if (projeto.status === "pronto") {
+  celebrar.comEquipe(); // 🎉
+  ir.paraOProximo();
+  debugar(); // sem culpa nenhuma!
+}
+<br>
+while (bugs > 0) {
+  cafe.beber();
+  refatorar();
+  testar();
+  bugs--;
+  motivacao++;
+}
+<br>
+// Comemoro cada vitória, por menor que seja!
+✨ Success! Somos Hexa-Campeões! 🇧🇷
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">💡</div>
+                <div class="card-content">
+                    <h3>Inovação Criativa</h3>
+                    <p>Desenvolvemos com a criatividade brasileira! Cada problema tem uma solução linda, cada código conta uma história, cada deploy é celebração!</p>
+                    <span class="badge">🧠 Genius Move</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <div class="card-content">
+                    <h3>Código Seguro</h3>
+                    <p>Testes rigorosos, code review atento, documentação impecável. Nosso padrão é ouro: confiável, robusto e a prova de falhas!</p>
+                    <span class="badge">✅ Rock Solid</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <div class="card-content">
+                    <h3>Comunidade Dev</h3>
+                    <p>Open source, compartilhamos conhecimento e crescemos juntos. Um dev ajuda outro, um projeto ajuda outro. Somos uma comunidade, não apenas competidores!</p>
+                    <span class="badge">🤲 Aberto e Livre</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="banner">
+        <h2>🏆 Nossos Números em Junho 🏆</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Festas Juninas 🌽</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Títulos Mundiais 🇧🇷</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Linhas de Código 💻</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Pura Diversão 🔥</div>
+            </div>
+        </div>
+        <p style="margin-top: 30px;">
+            Assim como os <span class="highlight-red">campeões em campo</span> e os <span class="highlight">santos juninos</span>,
+            nós desenvolvemos com <span class="highlight-red">garra</span>, celebramos <span class="highlight">juntos</span>
+            e aprendemos com cada desafio.
+            Que este mês seja de muito código, muita festa, muito forró e muita conquista! 🎊
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            ❤️ Desenvolvido com <span class="highlight">PAIXÃO</span> pelo <strong>Time de TI</strong> 🇧🇷
+        </p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+            "Que nosso código seja tão limpo quanto a nossa festa seja animada!" - Dev Junino 2026 🔥
+        </p>
+    </footer>
+
+    <script>
+        // Confetti Effect
+        function lancarConfetes() {
+            const emojis = ['🎊', '🎉', '🌽', '⚽', '💻', '🔥', '💛', '🎪', '👗', '💃'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.top = '-50px';
+                    confetti.style.opacity = Math.random() * 0.7 + 0.3;
+                    confetti.style.fontSize = Math.random() * 30 + 20 + 'px';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 30);
+            }
+        }
+
+        // Auto confetti on page load
+        window.addEventListener('load', () => {
+            setTimeout(lancarConfetes, 500);
+        });
+
+        // Mouse confetti effect
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON') return;
+            
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            for (let i = 0; i < 20; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.textContent = ['🎊', '🎉', '⭐', '💫', '🌟'][Math.floor(Math.random() * 5)];
+                confetti.style.left = x + 'px';
+                confetti.style.top = y + 'px';
+                confetti.style.opacity = Math.random() * 0.7 + 0.3;
+                document.body.appendChild(confetti);
+                
+                const angle = (Math.PI * 2 * i) / 20;
+                const velocity = 5 + Math.random() * 10;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity - 5;
+                
+                let px = x;
+                let py = y;
+                let vxc = vx;
+                let vyc = vy;
+                
+                const animate = () => {
+                    px += vxc;
+                    py += vyc;
+                    vyc += 0.2;
+                    
+                    confetti.style.transform = `translate(${px - x}px, ${py - y}px)`;
+                    
+                    if (py < window.innerHeight) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        confetti.remove();
+                    }
+                };
+                animate();
+            }
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const floats = document.querySelectorAll('.float-emoji');
+            const scrollPos = window.scrollY;
+            
+            floats.forEach((float, index) => {
+                float.style.transform = `translateY(${scrollPos * 0.5 * (index + 1)}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
